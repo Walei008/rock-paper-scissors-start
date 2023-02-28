@@ -27,13 +27,22 @@ scissors = '''
 
 #Write your code below this line 👇
 import random
-choice=input("What do you choose?Type 0 for rock,1 for paper,2 for scissors")
-separate_choice=choice.split(",")
-choice_num=len(choice)
-random_choice=random.randint(0,2)
-if random_choice==0:
-  print("i choose rock ")
-  if random_choice==1:
-    print("i choose paper")
-else:print("i choose scissors")
+user_choice=int(input("What do you choose?Type 0 for rock,1 for paper,2 for scissors."))
 
+
+computer_choice=random.randint(0,2)
+print(f"computer chose {computer_choice}")
+if user_choice==0 and computer_choice==2:
+  print("you win")
+elif computer_choice>user_choice:
+  print("You lose")
+elif computer_choice==user_choice:
+  print("its a draw")
+elif computer_choice==0 and user_choice==2:
+   print("you lose")
+elif user_choice>computer_choice:
+  print("you win")
+  
+
+        
+    
